@@ -1,0 +1,387 @@
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% auto;
+
+    gap: 15px;
+
+    transition-duration: 1s;
+
+
+
+}
+
+/* style for left side_bar */
+#sideBar {
+
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    background-color: rgb(54, 53, 53);
+
+    border-radius: 40px;
+    height: 720px;
+
+
+
+}
+
+#sideBar #parent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+
+
+}
+
+#img {
+
+    width: 240px;
+    background: none;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+#name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#netWorth {
+
+    font-size: larger;
+    margin-top: -10px;
+
+}
+
+.connect {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.connect:hover {
+    cursor: pointer;
+    zoom: 103%;
+}
+
+
+/* codes for main content 1 */
+
+#mainContent1 {
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-column-gap: 15px;
+    border-radius: 50px;
+    background-color: rgb(54, 53, 53);
+}
+
+#text {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 0px 25px;
+
+}
+
+#text #heading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+#aboutIronMan {
+    margin-top: -50px;
+}
+
+#btn_1st_content {
+
+    width: 100px;
+    margin-top: -50px;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: -9px;
+}
+
+#btn_1st_content:hover {
+    cursor: pointer;
+    zoom: 103%;
+}
+
+/* codes for main content 1 image */
+#image {
+    width: 695px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#image img {
+    width: 695px;
+    border-radius: 50px;
+}
+
+/* codes for main content 2 */
+#mainContent2 {
+
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    border-radius: 50px;
+    background-color: rgb(54, 53, 53);
+    padding-left: 40px;
+
+    /* border: 2px solid red; */
+
+}
+
+.heading {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+#mainContent2 table {
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding-top: 15px;
+
+
+
+    width: 95%;
+    height: 90%;
+
+}
+
+
+#mainContent2 table th {
+    text-align: left;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+#mainContent2 table td {
+    border-right: 1px solid grey;
+}
+
+#mainContent2 table tr {
+    /* border-right: 1px solid grey; */
+}
+
+#mainContent2 table tr,
+td,
+th {
+    padding: 7px;
+}
+
+
+
+/* for mobile view (width-360px) responsive site code starts here */
+
+
+@media screen and (max-width: 360px) {
+
+    body {
+        overflow-x: hidden;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        grid-template-columns: 300px;
+        width: 300px;
+        overflow-x: hidden;
+
+        transition-duration: 1s;
+
+
+    }
+
+    /* for left side bar */
+    #sideBar {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 300px;
+    }
+
+    /* for main content 1 */
+    #mainContent1 {
+
+        grid-template-columns: 300px;
+        width: 300px;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #text {
+        grid-row-gap: 50px;
+    }
+
+    #text #heading {}
+
+    #aboutIronMan {}
+
+    #btn_1st_content {}
+
+    #image {
+        width: 300px;
+    }
+
+    #image img {
+        width: 300px;
+    }
+
+    /* for main content 2 */
+    #mainContent2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 300px;
+
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #mainContent2 table {
+        margin-left: -10px;
+    }
+
+}
+
+
+
+/* for Tab view (width-850px) responsive site code starts here */
+
+
+@media screen and (max-width: 850px) {
+
+    body {
+        overflow-x: hidden;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 15px;
+
+
+
+        transition-duration: 1s;
+        /* overflow-x: hidden; */
+
+
+    }
+
+    /* for left side bar */
+    #sideBar {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        height: 100%;
+    }
+
+    /* for main content 1 */
+    #mainContent1 {
+
+        display: grid;
+
+        grid-template-columns: 100% 100%;
+
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+
+        /* grid-row-start: 2;
+        grid-row-end: 3; */
+    }
+
+    #text {
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-gap: 50px;
+
+        width: 320px;
+
+    }
+
+    #text #heading {}
+
+    #aboutIronMan {}
+
+    #btn_1st_content {}
+
+    #image {
+
+        grid-row-start: 2;
+        grid-row-end: 2;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        width: 320px;
+    }
+
+    #image img {
+
+        width: 300px;
+        margin-right: -45px;
+    }
+
+    /* for main content 2 */
+    #mainContent2 {
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #mainContent2 table {
+        margin-left: -10px;
+    }
+
+}
